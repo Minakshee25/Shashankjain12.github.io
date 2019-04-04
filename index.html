@@ -17,9 +17,10 @@
 <style media="screen">
   img{
     border-radius: 50%;
-    height: 30%;
-    width: 30%;
+    height: 40%;
+    width: 40%;
   }
+
   h1{
     font-size: 40px;
 
@@ -74,10 +75,21 @@
     background-color: #ffff;
   }
 
+p{
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 30px;
+  font-family: inherit;
+}
 </style>
+<script type="text/javascript">
+  function fun(image){
+
+  }
+</script>
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top navbar-default" role="banner">
   <a class="navbar-brand js-scroll-trigger" href="#page-top">Shashank</a>
   <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
     Menu
@@ -101,13 +113,51 @@
 <header class="masthead bg-primary text-white text-center">
 
   <div class="jumbotron bg-dark">
-    <img class="img-fluid mb-5 img-circle mx-auto d-block" src="img/profile.jpg" alt="">
+
+      <img class="img-fluid mb-5 img-circle mx-auto d-block" src="img/profile.jpg" alt="">
+
     <h1 class="text-uppercase mb-0">Shashank Jain</h1>
-    <hr class="star-light">
+<hr class="star-light">
     <h2 class="font-weight-light mb-0">Machine Learning - Front End and Back End Web Developer </h2>
+
   </div>
 </header>
 
+<div class="container">
+  <h2 class="text-center text-uppercase text-secondary mb-0" style="font-size:50px">Portfolio</h2>
+  <hr class="star-dark mb-5">
+</div>
+<div class="container" style="padding-left:130px;">
+  <div class="row">
+      <div class="col-md-6 col-lg-6">
+        <img class="img-fluid" src="img/car_crash.jpeg" onclick="fun(this);" style="width:70%; "></img>
+        <div class="caption">
+          <p>Accident Prevention project</p>
 
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6">
+        <img class="img-fluid" src="img/pithole.jpeg" onclick="fun(this);" style="width:43%"></img>
+        <div class="caption">
+        <p>Pithole Detection using OpenCV</p>
+
+      </div>
+    </div>
+      <div class="col-md-6 col-lg-6">
+        <img class="img-fluid" src="img/100_day.png" onclick="fun(this);" style="width:50%;"></img>
+        <div class="caption">
+        <p>100 Days Of Machine Learning</p>
+
+      </div>
+    </div>
+      <div class="col-md-6 col-lg-6">
+        <img class="img-fluid" src="img/research.jpeg" onclick="fun(this);" style="width:80%;"></img>
+        <div class="caption">
+          <p>Research paper on block cipher </p>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
   </body>
 </html>
