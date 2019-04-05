@@ -17,10 +17,12 @@
 <style media="screen">
   img{
     border-radius: 50%;
-    height: 40%;
-    width: 40%;
+    height: 50%;
+    width: 50%;
   }
-
+img:hover{
+  opacity: 0.7;
+}
   h1{
     font-size: 40px;
 
@@ -81,9 +83,112 @@ p{
   font-weight: 30px;
   font-family: inherit;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 30%;
+  height: 50%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
 </style>
 <script type="text/javascript">
-  function fun(image){
+  function clicked(images) {
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+
+      var img = document.getElementById(images);
+      console.log(img);
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+
+      modal.style.display = "block";
+      modalImg.src = img.src;
+       if (img==document.getElementById("crash")) {
+      captionText.innerHTML = "hello car is crashed";
+    } else if (img==document.getElementById("100day")) {
+      captionText.innerHTML = "hello 100 days";
+    }else if (img==document.getElementById("pithole")) {
+      captionText.innerHTML = "hello pitholes";
+    }else {
+      captionText.innerHTML = "Research";
+    }
+
+
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
 
   }
 </script>
@@ -127,38 +232,45 @@ p{
   <h2 class="text-center text-uppercase text-secondary mb-0" style="font-size:50px">Portfolio</h2>
   <hr class="star-dark mb-5">
 </div>
-<div class="container" style="padding-left:130px;">
+<div class="container" style="padding-left:50px;">
   <div class="row">
       <div class="col-md-6 col-lg-6">
-        <img class="img-fluid" src="img/car_crash.jpeg" onclick="fun(this);" style="width:70%; "></img>
+        <img class="img-fluid" src="img/car_crash.jpeg" id="crash" onclick="clicked('crash');" style="width:70%; "></img>
         <div class="caption">
           <p>Accident Prevention project</p>
 
         </div>
       </div>
       <div class="col-md-6 col-lg-6">
-        <img class="img-fluid" src="img/pithole.jpeg" onclick="fun(this);" style="width:43%"></img>
+        <img class="img-fluid" src="img/pithole.jpeg"  id="pithole" onclick="clicked('pithole');" style="width:43%"></img>
         <div class="caption">
         <p>Pithole Detection using OpenCV</p>
 
       </div>
     </div>
       <div class="col-md-6 col-lg-6">
-        <img class="img-fluid" src="img/100_day.png" onclick="fun(this);" style="width:50%;"></img>
+        <img class="img-fluid" src="img/100_day.png" id="100day" onclick="clicked('100day');" style="width:50%;"></img>
         <div class="caption">
         <p>100 Days Of Machine Learning</p>
 
       </div>
     </div>
       <div class="col-md-6 col-lg-6">
-        <img class="img-fluid" src="img/research.jpeg" onclick="fun(this);" style="width:80%;"></img>
+        <img class="img-fluid" src="img/research.jpeg" id="research" onclick="clicked('research');" style="width:80%;"></img>
         <div class="caption">
           <p>Research paper on block cipher </p>
         </div>
       </div>
   </div>
 </div>
+<!-- modal image -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption">
 
+  </div>
+</div>
 <div class="jumbotron bg-dark" id="about">
     <h2 class="text-center text-uppercase text-white" style="font-size:50px;">About</h2>
     <hr class="star-light mb-5">
