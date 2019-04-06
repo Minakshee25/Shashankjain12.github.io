@@ -211,6 +211,20 @@ p{
       }
 
   }
+  function verify(){
+    var name=document.getElementById("name");
+    var email=document.getElementById("email");
+    var phone=document.getElementById('phone');
+    var mssg=document.getElementById("message");
+    if (phone.value.length<10){
+      document.getElementById("p3").innerText="Enter atleast phone number of 10 digits";
+      return false;
+    }
+    if (mssg.value.length<50){
+      document.getElementById("p4").innerText="Enter atleast message of 50 characters";
+      return false;
+    }
+  }
 </script>
 </head>
   <body>
@@ -304,7 +318,7 @@ p{
   <span class="close">&times;</span>
   <div style="text-align:center;" id="projectname">
     <h2 class="text-secondary text-uppercase mb-0">Project</h2>
-      <hr class="star-dark mb-5" style="color:white;">
+      <hr class="star-light mb-5" style="color:white;">
   </div>
   <img class="modal-content" id="img01">
   <div id="caption">
@@ -313,7 +327,7 @@ p{
 </div>
 <div class="jumbotron bg-dark" id="about">
     <h2 class="text-center text-uppercase text-white" style="font-size:50px;">About</h2>
-    <hr class="star-light mb-5">
+    <hr class="star-dark mb-5">
     <div class="row">
       <div class="col-lg-4 ml-auto">
         <p style="color:white;" class="lead">I am Shashank Jain a Machine learning and web development enthusiast apart from that my aim is to make this world a free place where every one has there own rights and there is no falling backwards as everyone being keen to learn and i aims to create a society where money is not the only thing the people will earn i want everyone to be happy not from the stress but from the power they have. </p>
@@ -321,6 +335,53 @@ p{
         <div class="col-lg-4 mr-auto">
         <p style="color:white;" class="lead"> With this i want to carry forward my learning and one day want to create this world a better place where everyone can feel free and do whatever they want for the good of the society and one day this i will do with the help of my dream an AI world.</p>
     </div>
+</div>
+</div>
+<!-- contacts section -->
+<div class="jumbotron bg-light " id="contacts">
+  <h2 class="text-uppercase text-secondary mb-0" style="text-align:center; font-size:50px;">Contact</h2>
+  <hr class="star-dark mb-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+      <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+      <form name="sentMessage" id="contactForm" onsubmit="return verify();" >
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+            <label>Name</label>
+            <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+            <label>Email Address</label>
+            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+            <label>Phone Number</label>
+            <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+            <p id="p3"></p>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+            <label>Feedback</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Feedback" required="required" data-validation-required-message="Please enter a message of atleast 50-100 words."></textarea>
+            <p id="p4"></p>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton" onclick="verify();">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
 </div>
   </body>
 </html>
