@@ -166,7 +166,7 @@ p{
 
       // Get the modal
       var modal = document.getElementById('myModal');
-
+      var projectname=document.getElementById('projectname')
       // Get the image and insert it inside the modal - use its "alt" text as a caption
 
       var img = document.getElementById(images);
@@ -175,16 +175,29 @@ p{
       var captionText = document.getElementById("caption");
       var a="Open this project on github";
       var cars="Description:".bold()+"   This project is an initiative to prevent accidents by detecting cars on the highway.This project uses OpenCV for image processing for detection of cars and after detecton it measures certain threshold velocity and by measuring distance between two objects it detects whether certain accident is going to happen or not,if certain minimum distance is reached it signals certain alarm so as to prevents accidents. "
+      var pitholes="Description:".bold()+"This project aims to give a stick to the person who can't see with the help of this project i aim to protect persons to travel safe on the road this project simply uses image processing techniques to do detect certain images of cracked road and thereby giving people alarm that there is certain obstacle ahead and aims to keep people safe while they are travelling on road.This not only helps them but also helps government to keep track of places where roads are not safe and fill those cracks";
       modal.style.display = "block";
       modalImg.src = img.src;
        if (img==document.getElementById("crash")) {
+         projectname.innerHTML="Accident Prevention".bold();
+         projectname.style.color="white";
       captionText.innerHTML =cars+"<br></br>"+ a.link("https://www.github.com/Shashankjain12/Accident-prevention");
+      captionText.style.width="100%";
     } else if (img==document.getElementById("100day")) {
+      projectname.innerHTML="100 Days Of Machine Learning".bold();
+      projectname.style.color="white";
       captionText.innerHTML = "hello 100 days";
+      captionText.style.width="100%";
     }else if (img==document.getElementById("pithole")) {
-      captionText.innerHTML = "hello pitholes";
+      projectname.innerHTML="Crack Detection".bold();
+      projectname.style.color="white";
+      captionText.innerHTML = pitholes+"<p></p>"+a.link("https://github.com/HackBMU/HackBMU2019_CodeStormNerds");
+      captionText.style.width="100%";
     }else {
+      projectname.innerHTML="Research Paper On Block Cipher".bold();
+      projectname.style.color="white";
       captionText.innerHTML = "Research";
+      captionText.style.width="100%";
     }
 
 
@@ -289,8 +302,9 @@ p{
 <!-- modal image -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
-  <div style="text-align:center;">
+  <div style="text-align:center;" id="projectname">
     <h2 class="text-secondary text-uppercase mb-0">Project</h2>
+      <hr class="star-dark mb-5" style="color:white;">
   </div>
   <img class="modal-content" id="img01">
   <div id="caption">
