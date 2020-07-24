@@ -1,446 +1,279 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html class="no-js" lang="en">
+
+<head>
     <meta charset="utf-8">
-    <title>Portfolio Of Shashank Jain(Shashankjain12)</title>
-    <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-<!-- custom fonts -->
-<!-- Custom fonts for this template -->
-<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-<style media="screen">
-  *{
-    box-sizing: border-box;
-  }
-  img{
-    border-radius: 50%;
-    height: 50%;
-    width: 50%;
-  }
-img:hover{
-  opacity: 0.7;
-}
-  h1{
-    font-size: 40px;
-
-    font-family: serif;
-  }
-  h2{
-    font-size: 20px;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-
-  hr.star-light,
-  hr.star-dark {
-    max-width: 15rem;
-    padding: 0;
-    text-align: center;
-    border: none;
-    border-top: solid 0.25rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  hr.star-light:after,
-  hr.star-dark:after {
-    position: relative;
-    top: -.8em;
-    display: inline-block;
-    padding: 0 0.25em;
-    font-weight: 900;
-    font-size: 2em;
-  }
-
-  hr.star-light {
-    border-color: #fff;
-  }
-
-  hr.star-light:after {
-    color: #fff;
-    background-color: #18BC9C;
-  }
-
-  hr.star-dark {
-    border-color: #2C3E50;
-  }
-
-  hr.star-dark:after {
-    color: #2C3E50;
-    background-color: white;
-  }
-  header{
-    background-color: #ffff;
-  }
-
-p{
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 30px;
-  font-family: inherit;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 30%;
-  height: 50%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 38%;
-
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 180px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.content {
-  padding: 30px;
-}
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #2C3E50;
-  color: #fff;
-}
-
-.copyright {
-  background-color: #1a252f;
-}
-
-</style>
-<script type="text/javascript">
-  function clicked(images) {
-
-      // Get the modal
-      var modal = document.getElementById('myModal');
-      var projectname=document.getElementById('projectname')
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-
-      var img = document.getElementById(images);
-      console.log(img);
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-      var a="Open this project on github";
-      var cars="Description:".bold()+"   This project is an initiative to prevent accidents by detecting cars on the highway.This project uses OpenCV for image processing for detection of cars and after detecton it measures certain threshold velocity and by measuring distance between two objects it detects whether certain accident is going to happen or not,if certain minimum distance is reached it signals certain alarm so as to prevents accidents. "
-      var pitholes="Description:".bold()+"This project aims to give a stick to the person who can't see with the help of this project i aim to protect persons to travel safe on the road this project simply uses image processing techniques to do detect certain images of cracked road and thereby giving people alarm that there is certain obstacle ahead and aims to keep people safe while they are travelling on road.This not only helps them but also helps government to keep track of places where roads are not safe and fill those cracks";
-      modal.style.display = "block";
-      modalImg.src = img.src;
-       if (img==document.getElementById("crash")) {
-         projectname.innerHTML="Accident Prevention".bold();
-         projectname.style.color="white";
-      captionText.innerHTML =cars+"<br></br>"+ a.link("https://www.github.com/Shashankjain12/Accident-prevention");
-      captionText.style.width="100%";
-    } else if (img==document.getElementById("100day")) {
-      projectname.innerHTML="100 Days Of Machine Learning".bold();
-      projectname.style.color="white";
-      captionText.innerHTML = "Description:".bold()+" This is an initia for overall development in the field of machine learning not only to learn by yourself but to make other aware of upcoming technologies that we can achieve through machnine learning this is daily code for 100 days and commiting daily wise progress of learning the way how machine behaves"+"<br></br>"+"For more details visit this link:"+a.link("https://github.com/Shashankjain12/100_days_of_ml");
-      captionText.style.width="100%";
-    }else if (img==document.getElementById("pithole")) {
-      projectname.innerHTML="Crack Detection".bold();
-      projectname.style.color="white";
-      captionText.innerHTML = pitholes+"<p></p>"+a.link("https://github.com/HackBMU/HackBMU2019_CodeStormNerds");
-      captionText.style.width="100%";
-    }else {
-      projectname.innerHTML="Research Paper On Block Cipher".bold();
-      projectname.style.color="white";
-      captionText.innerHTML = "Description:".bold()+"Had done research work on topic"+ ' nth iteration of block cipher '.bold() +" which deals with the context that after many iteration in block cipher data integrity gets fully lost ie. no information is remained so for large size of information text cipher is the good solution.";
-      captionText.style.width="100%";
-    }
-
-
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-
-  }
-  function verify(){
-    var name=document.getElementById("name");
-    var email=document.getElementById("email");
-    var phone=document.getElementById('phone');
-    var mssg=document.getElementById("message");
-    if (phone.value.length<10){
-      document.getElementById("p3").innerText="Enter atleast phone number of 10 digits";
-      return false;
-    }
-    if (mssg.value.length<50){
-      document.getElementById("p4").innerText="Enter atleast message of 50 characters";
-      return false;
-    }
-  }
-</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top navbar-default" role="banner">
-  <a class="navbar-brand js-scroll-trigger" href="#page-top">Shashank</a>
-  <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-    Menu
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item mx-0 mx-lg-1">
-        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-      </li>
-      <li class="nav-item mx-0 mx-lg-1">
-        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-      </li>
-      <li class="nav-item mx-0 mx-lg-1">
-        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contacts">Contact</a>
-      </li>
-    </ul>
-  </div>
 
-</nav>
-<header class="masthead bg-primary text-white text-center">
-
-  <div class="jumbotron bg-dark">
-
-      <img class="img-fluid mb-5 img-circle mx-auto d-block" src="img/profile.jpg" alt="">
-
-    <h1 class="text-uppercase mb-0">Shashank Jain</h1>
-<hr class="star-light">
-    <h2 class="font-weight-light mb-0">Machine Learning - Front End and Back End Web Developer </h2>
-
-  </div>
-</header>
-
-<div class="container" id="portfolio">
-  <h2 class="text-center text-uppercase text-secondary mb-0" style="font-size:50px">Portfolio</h2>
-  <hr class="star-dark mb-5">
-</div>
-<div class="container" style="padding-left:50px;">
-  <div class="row">
-      <div class="col-md-6 col-lg-6">
-        <div class="content">
-
-
-        <img class="img-fluid" src="img/car_crash.jpeg" id="crash" onclick="clicked('crash');" style="width:70%; "></img>
-        <div class="caption">
-
-          <h3>Accident Prevention project</h3>
-
-        </div>
-      </div>
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-      <div class="col-md-6 col-lg-6">
-        <div class="content">
-
-
-        <img class="img-fluid" src="img/pithole.jpeg"  id="pithole" onclick="clicked('pithole');" style="width:43%"></img>
-        <div class="caption">
-        <h3>Pithole Detection using OpenCV</h3>
-</div>
-      </div>
-    </div>
-      <div class="col-md-6 col-lg-6">
-        <div class="content">
-
-
-        <img class="img-fluid" src="img/100_day.png" id="100day" onclick="clicked('100day');" style="width:50%;"></img>
-        <div class="caption">
-        <h3>100 Days Of Machine Learning</h3>
-</div>
-      </div>
-    </div>
-      <div class="col-md-6 col-lg-6">
-        <div class="content">
-
-
-        <img class="img-fluid" src="img/research.jpeg" id="research" onclick="clicked('research');" style="width:80%;"></img>
-
-        <div class="caption">
-          <h3>Research paper on block cipher </h3>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-      </div>
-  </div>
-</div>
-</div>
-<!-- modal image -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <div style="text-align:center;" id="projectname">
-    <h2 class="text-secondary text-uppercase mb-0">Project</h2>
-      <hr class="star-light mb-5" style="color:white;">
-  </div>
-  <img class="modal-content" id="img01">
-  <div id="caption">
-
-  </div>
-</div>
-<div class="jumbotron bg-dark" id="about">
-    <h2 class="text-center text-uppercase text-white" style="font-size:50px;">About</h2>
-    <hr class="star-light mb-5">
-    <div class="row">
-      <div class="col-lg-4 ml-auto">
-        <p style="color:white;" class="lead">I am Shashank Jain a Machine learning and web development enthusiast apart from that my aim is to make this world a free place where every one has there own rights and there is no falling backwards as everyone being keen to learn and i aims to create a society where money is not the only thing the people will earn i want everyone to be happy not from the stress but from the power they have. </p>
-        </div>
-        <div class="col-lg-4 mr-auto">
-        <p style="color:white;" class="lead"> With this i want to carry forward my learning and one day want to create this world a better place where everyone can feel free and do whatever they want for the good of the society and one day this i will do with the help of my dream an AI world.</p>
-    </div>
-</div>
-</div>
-<!-- contacts section -->
-<div class="jumbotron bg-light " id="contacts">
-  <h2 class="text-uppercase text-secondary mb-0" style="text-align:center; font-size:50px;">Contact</h2>
-  <hr class="star-dark mb-5">
-  <div class="row">
-    <div class="col-lg-8 mx-auto">
-      <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-      <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-      <form name="sentMessage" id="contactForm" onsubmit="return verify();" >
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls mb-0 pb-2">
-            <label>Name</label>
-            <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
-
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls mb-0 pb-2">
-            <label>Email Address</label>
-            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
-
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls mb-0 pb-2">
-            <label>Phone Number</label>
-            <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
-            <p id="p3"></p>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls mb-0 pb-2">
-            <label>Feedback</label>
-            <textarea class="form-control" id="message" rows="5" placeholder="Feedback" required="required" data-validation-required-message="Please enter a message of atleast 50-100 words."></textarea>
-            <p id="p4"></p>
-          </div>
-        </div>
-        <br>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton" onclick="verify();">Send</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-</div>
-
-  <!-- Footer -->
-  <footer class="footer text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">New Delhi, India</p>
-        </div>
-        <div class="col-md-6 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-facebook-f"></i>
-              </a>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
             </li>
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-google-plus-g"></i>
-              </a>
+            <li>
+                <a href="#experience">Experience</a>
             </li>
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-twitter"></i>
-              </a>
+            <li>
+                <a href="#education">Education</a>
             </li>
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-linkedin-in"></i>
-              </a>
+            <li>
+                <a href="#projects">Projects</a>
             </li>
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-dribbble"></i>
-              </a>
+            <li>
+                <a href="#skills">Skills</a>
             </li>
-          </ul>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Shashank Jain</h1>
+            <h2>Software Engineer</h2>
+            <a href="#" class="btn-rounded-white">Download Resume</a>
         </div>
+        <!-- End #lead-content -->
 
-      </div>
-    </div>
-  </footer>
+        <div id="lead-overlay"></div>
 
-  <div class="copyright py-4 text-center text-white">
-    <div class="container">
-      <small>Copyright &copy; Your Website 2019</small>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
     </div>
-  </div>
-  </body>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
+                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
+                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+
+            <div data-date="September 2015 – September 2016">
+                <h3>Employer Name</h3>
+                <h4>Job Title</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University of Ottawa</h3>
+            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>University of Ottawa</h3>
+            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Project Name Here</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>React</li>
+            <li>Elixir</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Ruby on Rails</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>React</li>
+            <li>Elixir</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>Ruby on Rails</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 YOUR NAME
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
 </html>
