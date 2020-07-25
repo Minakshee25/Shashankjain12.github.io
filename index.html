@@ -12,6 +12,45 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+    .quotation{
+      font-size: 20px;
+      //margin: 0 auto;
+      quotes: "\201C""\201D""\2018""\2019";
+      padding: 10px 20px;
+      line-height: 1.4;
+    }
+
+    .quotation:before {
+      content: open-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: -10px;
+      position: relative;
+      top: 30px;
+      color: #ccc;
+      font-size: 3em;
+    }
+    .quotation::after {
+      content: close-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: 10px;
+      position: relative;
+      top: 35px;
+      color: #ccc;
+      font-size: 3em;
+    }
+    footer{
+      margin:0;
+      text-align: right;
+      font-size: 1.5em;
+      font-style: italic;
+    }
+
+    </style>
 </head>
 
 <body>
@@ -80,10 +119,13 @@
                     I am an <i>Open Source Enthusiast</i> I love to work open source and building community with developers so that we can use the libraries more efficiently
                     as a part of my interest I have been part of many organizations and making their code more bug free so that anyone can use their code more freely.
                   </br>
-                   Apart from that my aim is to make this world a free place where every one has there own rights and there is no falling backwards as everyone being
-                   keen to learn and i aims to create a society where money is not the only thing the people will earn i want everyone to be happy not from the stress
-                   but from the power they have.
+                   <blockquote><p class="quotation">
+                     My aim is to make this world a free place where everyone will be enthusiastic to learn and I aims to
+                     build a society where money is not everything I want everyone to be happy not from the stress
+                     but from the power they have.
+                  </p>
 
+                  </blockquote>
                     </p>
                 </div>
             </div>
@@ -95,7 +137,7 @@
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
             <div data-date="May 2020 - September 2020">
-                <h3>Google Summer Of Code 2020</h3>
+                <h3><a href="https://summerofcode.withgoogle.com/projects/##6317951134728192">Google Summer Of Code 2020</a></h3>
                 <h4>BioGears</h4>
                 <p>
                   Contributed at BioGears Open Source Organization I have analyzed the structure of BioGears and after analysing the structure my task is to
@@ -108,18 +150,23 @@
             </div>
 
             <div data-date="June 2019 – August 2019">
-                <h3>Mind Mapperz Innovation Pvt Ltd</h3>
+                <h3><a href="https://drive.google.com/file/d/1qi8fFo_jRtaerN12fUwcDnLgiobEFq3-/view?usp=sharing">Mind Mapperz Innovation Pvt Ltd</a></h3>
                 <h4>Machine Learning Technical Executive Intern</h4>
                 <p>
-
+                  My task is to create Attendance Management System using Computer
+                  Vision. I have created such a robust system which with the help of
+                  Computer Vision can directly maps the presence of student into the
+                  system.
                 </p>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="June 2018 – July 2018">
+                <h3><a href="https://drive.google.com/file/d/1fxCF2OHRk8ZoIspDGL9vFx7cVFeEhC1t/view">DELL EMC</a></h3>
+                <h4>Data Science And Analytics Trainee</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                  Industry—based training and hands—on experience on Data Science
+                  and Machine Learning Technology and thereby learnt about how to
+                  analyze data through plots.
                 </p>
             </div>
         </div>
@@ -129,36 +176,41 @@
     <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>Guru Gobind Singh Indraprastha University</h3>
+            <span class="education-date">June 2016 - August 2020</span>
+            <h4>Bachelor of Technoloy in Computer Science</h4>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+              CGPA-8.8
             </p>
         </div>
         <!-- End .education-block -->
 
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>DAV Public School, Ashok Vihar</h3>
+            <!-- <span class="education-date">Sept 2016 - Sept 2017</span> -->
+            <h4></h4>
             <ul>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Xth Standard <br>
+                  (2013-2014) <br>
+                  9.0 CGPA
+                    <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. -->
                 </li>
+                <br>
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  XIIth Standard <br>
+                  (2015-2016)<br>
+                   89%
+                    <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. -->
                 </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
+
             </ul>
         </div>
         <!-- End .education-block -->
     </div>
     <!-- End #education -->
 
-    <div id="projects" class="background-alt">
+    <div id="projects" class="background-alt ">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
@@ -168,11 +220,15 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3><strong>Divyaang<strong></h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            This projects aims to create a system for deaf and dumb people from which their handgestures can be
+                            understand by anyone. This project uses Deep Learning technology named as Convolution Neural Network
+                            by which I have first trained my model on custom dataset that I have created by myself which aims to
+                            extract features from it and then uses recommendation system to recommend particular words to the person
+                            on the basis of recognized character.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://github.com/Shashankjain12/Gesture_Recognition">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -184,15 +240,51 @@
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
+                        <h3><strong>Emotion Recognition Using Computer Vision</strong></h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                          This project involves detection of 7 types of emotions of the person
+                          using camera with the help of Computer Vision and Deep Learning.In this i have used CNN technology to identify the emotions of the person and used it to analyze whether the person
+                          is happy or not while studying in order to know the concentration of the student.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="https://github.com/Shashankjain12/Emotion_Detection">View Project</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
-                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3><strong>Personality Identifier</strong></h3>
+                        <p>
+                          I have created a Personality identifier system using NLP by analyzing
+                          the texts of person we can identify the emotions of person in this project I have contvectorizer and Bag
+                          Of words model to extract text and for contextual analysis of the person and then been able to identify emotions of the person when they chat.
+                      </p>
+                        <a href="https://github.com/Shashankjain12/Udadelhi">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3><strong>Accident Prevention System</strong></h3>
+                        <p>
+                          Prevention of accidents using Deep Learning and Computer Vision By
+                          tracking distance between two cars.In this approach I have first detected the cars using YOLO object detection then
+                          after detection of cars I have calculated the distance between two and then if they hit the certain distance alarm will be caused accordingly.
+                        </p>
+                        <a href="https://github.com/Shashankjain12/Accident-Prevention">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                  <!-- End .project -->
             </div>
         </div>
     </div>
@@ -201,32 +293,16 @@
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
+            <li>Python</li>
             <li>JavaScript</li>
             <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
             <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
             <li>C</li>
-            <li>C#</li>
             <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
+            <li>Machine learning</li>
+            <li>Deep Learning</li>
+            <li>Computer Vision</li>
+            <li>Natural Language Processing</li>
         </ul>
     </div>
     <!-- End #skills -->
@@ -250,7 +326,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2020 YOUR NAME
+                        Copyright &copy; 2020 Shashank Jain
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -261,13 +337,13 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/Shashankjain12" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/shashank-jain-6b6322171/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
